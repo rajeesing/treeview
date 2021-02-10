@@ -1,0 +1,294 @@
+<html>
+
+<head>
+    <title>Tree View</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="treeview.js"></script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .treeview ul {
+            list-style-type: none;
+        }
+
+        .fa {
+            width: 12px;
+        }
+
+        input[type=checkbox] {
+            margin-right: 5px;
+        }
+
+        .fa-caret-right,
+        .fa-caret-down {
+            cursor: pointer;
+        }
+
+        ul.treeview {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+            ul.treeview ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            ul.treeview ul {
+                margin-left: 1.0em;
+            }
+
+            .tree-intro,
+            ul.treeview li {
+                position: relative;
+                margin-left: 0;
+                padding-left: 1em;
+                margin-top: 0;
+                margin-bottom: 0;
+                border-left: thin solid #e8e8e8;
+            }
+
+                ul.treeview li:last-child {
+                    border-left: none;
+                }
+
+            ul.treeview ul li:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 1.5em;
+                /* width of horizontal line */
+                height: 0.5em;
+                /* vertical position of line */
+                vertical-align: top;
+                border-bottom: thin solid #e8e8e8;
+                content: "";
+                display: inline-block;
+            }
+
+            ul.treeview ul li.parent:before {
+                width: .8em;
+            }
+
+            ul.treeview li:last-child:before {
+                border-left: thin solid #e8e8e8;
+            }
+
+       
+    </style>
+</head>
+<body>
+
+    <div id="control-container">
+      
+        <ul id="treeview" class="treeview" data-role="treeview">
+            <li>
+                <input type="checkbox" class="chk-inline" data-role="checkbox" id="all"> <label for="all">All</label><ul>
+                    <li>
+                        <input type="checkbox" class="chk-inline" data-role="checkbox" id="1"> <label for="1">Option 1</label> 
+                        <ul>
+                            <li>
+                                <input type="checkbox" class="chk-inline" data-role="checkbox" id="2"><label for="2">Option 2</label>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" class="chk-inline" data-role="checkbox" id="3"><label for="3">Option 3</label>
+                                        <ul>
+                                            <li>
+                                                <input id="4" type="checkbox" class="chk-inline" data-role="checkbox"><label for="4">Option 4</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="chk-inline" data-role="checkbox" id="5"><label for="5">Option 5</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="chk-inline" data-role="checkbox" id="6"><label for="6">Option 6</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="chk-inline" data-role="checkbox" id="7"><label for="7">Option 7</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="chk-inline" data-role="checkbox" id="8"><label for="8">Option 8</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="chk-inline" data-role="checkbox" id="9"><label for="9">Option 9</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="chk-inline" data-role="checkbox" id="10"><label for="10">Option 10</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="chk-inline" data-role="checkbox" id="11"><label for="11">Option 11</label>
+                                            </li>
+                                            <li><input type="checkbox" class="chk-inline" data-role="checkbox" id="12"><label for="12">Option 12</label></li>
+                                            <li>
+                                                <input type="checkbox" class="chk-inline" data-role="checkbox" id="13"><label for="13">Option 13</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="chk-inline" data-role="checkbox" id="14"><label for="14">Option 14</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="chk-inline" data-role="checkbox" id="15"><label for="15">Option 15</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="chk-inline" data-role="checkbox" id="16"><label for="16">Option 16</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="chk-inline" data-role="checkbox" id="17"><label for="17">Option 17</label>
+                                            </li>
+                                            <li><input type="checkbox" class="chk-inline" data-role="checkbox" id="18"><label for="18">Option 18</label></li>
+                                            <li>
+                                                <input type="checkbox" class="chk-inline" data-role="checkbox" id="19"><label for="19">Option 19</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="chk-inline" data-role="checkbox" id="20"><label for="20">Option 20</label>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="chk-inline" data-role="checkbox" id="21"><label for="21">
+                                            Option 21
+                                        </label>
+                                        <ul>
+                                            <li>
+                                                <input type="checkbox" class="chk-inline" data-role="checkbox" id="22"><label for="22">Option 22</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="chk-inline"
+                                                       data-role="checkbox" id="23"><label for="23">Option 23</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="chk-inline" data-role="checkbox" id="24"><label for="24">Option 24</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="chk-inline" data-role="checkbox" id="25"><label for="25">Option 25</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="chk-inline" data-role="checkbox" id="26"><label for="26">Option 26</label>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <input type="checkbox" class="chk-inline" data-role="checkbox" id="27">
+                                        <label for="27">Option 27</label>
+                                        <ul>
+                                            <li>
+                                                <input type="checkbox" class="chk-inline" data-role="checkbox" id="home">
+                                                <label for="home">Home</label><ul>
+                                                    <li style="background:none">
+                                                        <input type="checkbox"
+                                                               class="chk-inline" data-role="checkbox" id="28"><label for="28">Option 28</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="chk-inline"
+                                                               data-role="checkbox" id="29"><label for="29">Option 29</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="chk-inline"
+                                                               data-role="checkbox" id="30"><label for="30">Option 30</label>
+                                                    </li>
+
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="chk-inline" data-role="checkbox" id="31">
+                                                <label for="31">
+                                                    Option 31
+                                                </label>
+                                                <ul>
+                                                    <li>
+                                                        <input type="checkbox" class="chk-inline"
+                                                               data-role="checkbox" id="32"><label for="32">Option 32</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="chk-inline"
+                                                               data-role="checkbox" id="33"><label for="33">Option 33</label>
+                                                    </li>
+
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" class="chk-inline" data-role="checkbox" id="34">
+                                                <label for="34">Option 34</label><ul>
+                                                    <li>
+                                                        <input type="checkbox" class="chk-inline"
+                                                               data-role="checkbox" id="35"><label for="35">Option 35</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="chk-inline"
+                                                               data-role="checkbox" id="36"><label for="36">Option 36</label>
+                                                    </li>
+
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+
+
+                                </ul>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="chk-inline" data-role="checkbox" id="37">
+                                <label for="37">
+                                    Option 37
+                                </label>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" class="chk-inline" data-role="checkbox" id="38"><label for="38">Option 38</label>
+
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="chk-inline" data-role="checkbox" id="39"><label for="39">Option 39</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="chk-inline" data-role="checkbox" id="40"><label for="40">Option 40</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="chk-inline" data-role="checkbox" id="41"><label for="41">Option 41</label>
+                                    </li>
+
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="chk-inline" data-role="checkbox" id="42">
+                        <label for="42">
+                            Option 42
+                        </label><ul>
+                            <li><input type="checkbox" class="chk-inline" data-role="checkbox" id="43"><label for="43">Option 43</label></li>
+                            <li><input type="checkbox" class="chk-inline" data-role="checkbox" id="44"><label for="44">Option 44</label></li>
+                            <li>
+                                <input type="checkbox" class="chk-inline" data-role="checkbox" id="45">
+                                <label for="45">
+                                    Option 45
+                                </label><ul>
+                                    <li>
+                                        <input type="checkbox" class="chk-inline" data-role="checkbox" id="46"><label for="46">Option 46</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="chk-inline" data-role="checkbox" id="47"><label for="47">Option 47</label>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
